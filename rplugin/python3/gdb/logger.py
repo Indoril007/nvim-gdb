@@ -13,18 +13,18 @@ LOGGING_CONFIG = {
         'null': {
             'class': 'logging.NullHandler',
         },
-        # 'file': {
-        #     'level': 'INFO',
-        #     'formatter': 'standard',
-        #     'class': 'logging.FileHandler',
-        #     'filename': '/tmp/nvimgdb.log',
-        #     #'mode': 'a',
-        # },
+         'file': {
+             'level': 'DEBUG',
+             'formatter': 'standard',
+             'class': 'logging.FileHandler',
+             'filename': '/tmp/nvimgdb.log',
+             #'mode': 'a',
+         },
     },
     'loggers': {
         '': {  # root logger
-            'handlers': ['null'],
-            'level': 'INFO',
+            'handlers': ['file'],
+            'level': 'DEBUG',
             'propagate': False
         },
     }
